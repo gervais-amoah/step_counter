@@ -1,24 +1,17 @@
 :root {
-  /* Breakpoints */
-  --breakpoint-small: 480px;
-  --breakpoint-medium: 768px;
-  --breakpoint-large: 992px;
-  --breakpoint-xlarge: 1200px;
-
   /* Spacing */
   --spacing-small: 1rem;
   --spacing-medium: 2rem;
   --spacing-large: 3rem;
-  --spacing-xlarge: 4rem;
 
   /* Font sizes */
   --font-size-small: 0.8rem;
   --font-size-medium: 1rem;
-  --font-size-large: 1.2rem;
-  --font-size-xlarge: 1.5rem;
+  --font-size-large: 1.5rem;
 
   /* Colors */
   --background-main: #edf4f7;
+  --background-main-o8: rgba(237, 244, 247, 0.7);
   --background-side: #f4f8fa;
   --primary-blue: #32444d;
   --secondary-blue: #b3c3cc;
@@ -26,6 +19,11 @@
   --primary-orange: #ff6719;
   --secondary-orange: #ffaa80;
 }
+
+/* Breakpoints */
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
 
 body {
   font-family: "Inter", sans-serif;
@@ -38,11 +36,30 @@ body {
 
   display: grid;
   grid-template-columns: 320px 1fr;
+
+  @media screen and (min-width: $breakpoint-xlarge) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    display: block;
+    --spacing-large: 2rem;
+  }
 }
 
 nav {
   background-color: var(--background-side);
   padding: var(--spacing-large);
+}
+
+.nav-info {
+  @media screen and (max-width: $breakpoint-large) {
+    --spacing-small: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--spacing-small);
+  }
 }
 
 main {
@@ -51,7 +68,7 @@ main {
 
 h1,
 .heading-1 {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-large);
   font-weight: 700;
   margin-top: 0;
 }
@@ -61,14 +78,30 @@ h2 {
   font-size: var(--font-size-small);
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: var(--font-size-xlarge);
+  margin-top: var(--font-size-large);
 }
 
 p {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-large);
 }
 
 // SVG STYLE
+
+.today,
+.month {
+  width: 100%;
+  @media screen and (max-width: $breakpoint-large) {
+    width: 98%;
+  }
+}
+
+.today {
+  height: 200px;
+}
+
+.month {
+  height: 600px;
+}
 
 rect {
   transition: fill 0.2s ease-in;
