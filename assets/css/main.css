@@ -154,6 +154,22 @@ select {
   }
 }
 :root {
+  /* Breakpoints */
+  --breakpoint-small: 480px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-xlarge: 1200px;
+  /* Spacing */
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+  --spacing-xlarge: 4rem;
+  /* Font sizes */
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-xlarge: 1.5rem;
+  /* Colors */
   --background-main: #edf4f7;
   --background-side: #f4f8fa;
   --primary-blue: #32444d;
@@ -165,7 +181,7 @@ select {
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   line-height: 1.5;
   min-height: 100vh;
   background-color: var(--background-main);
@@ -178,30 +194,30 @@ body {
 
 nav {
   background-color: var(--background-side);
-  padding: 48px;
+  padding: var(--spacing-large);
 }
 
 main {
-  padding: 48px;
+  padding: var(--spacing-large);
 }
 
 h1,
 .heading-1 {
-  font-size: 24px;
+  font-size: var(--font-size-xlarge);
   font-weight: 700;
   margin-top: 0;
 }
 
 h2 {
   color: var(--secondary-blue);
-  font-size: 14px;
+  font-size: var(--font-size-small);
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 24px;
+  margin-top: var(--font-size-xlarge);
 }
 
 p {
-  font-size: 24px;
+  font-size: var(--font-size-xlarge);
 }
 
 rect {
@@ -220,7 +236,7 @@ rect.transparent {
 }
 
 text {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   text-anchor: middle;
   fill: var(--primary-orange);
 }
