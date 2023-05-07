@@ -8,12 +8,14 @@ the average steps per day, the total steps for the last 28 days, and the total s
 
 The app is built using HTML, CSS (SCSS), and Vanilla JS, with D3.js used for data visualization.
 The code is modular and follows best practices in web development.
-The app is responsive and works well on different devices, including desktops, laptops, tablets, and smartphones.
+The app is responsive and works well on different devices, including desktops, laptops, tablets, and smartphones (in landscape).
 
 ## Installation
+
 To run the app, you can simply download the repository and open the index.html file in your browser.
 Alternatively, you can use a local web server or deploy the app to a web hosting service.
 
 ## Contribution
+
 Contributions to the app are welcome! You can submit bug reports, feature requests, or pull requests to improve the functionality
 or the design of the app.
