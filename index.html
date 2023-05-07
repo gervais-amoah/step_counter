@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Step Counter</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="heading-1">Hello Gev</h1>
+
+      <h2>Worst Day</h2>
+      <p class="worst-day">---- steps</p>
+
+      <h2>Average Day</h2>
+      <p class="average-day">---- steps</p>
+
+      <h2>Best Day</h2>
+      <p class="best-day">---- steps</p>
+
+      <h2>Total last 28 days</h2>
+      <p class="total-month">---- steps</p>
+
+      <h2>Total for so far today</h2>
+      <p class="total-day">---- steps</p>
+
+      <h2>Biggest difference</h2>
+      <p class="difference">---- steps</p>
+    </nav>
+
+    <main>
+      <h2 class="heading-1">Today</h2>
+
+      <svg width="900" height="200" class="today"></svg>
+
+      <h2 class="heading-1">Last 28 days</h2>
+
+      <svg width="900" height="600" class="month"></svg>
+    </main>
+
+    <script src="./assets/js/d3.min.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main-dist.js"></script>
+  </body>
+</html>

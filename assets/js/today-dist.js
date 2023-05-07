@@ -1,0 +1,1 @@
+const todaySvg=d3.select("svg.today"),rectTags=todaySvg.selectAll("rect"),barScale=d3.scaleLinear().domain([0,2e3]).range([1,112]);rectTags.data(todayData).enter().append("rect").attr("x",((a,t)=>36*t)).attr("y",(a=>112-barScale(a))).attr("width",24).attr("height",(a=>barScale(a)));

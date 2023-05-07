@@ -1,0 +1,1 @@
+"use strict";console.log("loaded");var data=[100,87,27,66,45,38],todaySvg=document.querySelector("svg");data.forEach((function(t,e){var r=document.createElementNS("http://www.w3.org/2000/svg","rect");r.setAttribute("x",36*e),r.setAttribute("y",112-t),r.setAttribute("width",24),r.setAttribute("height",t),todaySvg.appendChild(r)}));
